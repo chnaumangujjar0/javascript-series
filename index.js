@@ -11,7 +11,7 @@ let b=String(c);
 
 // console.log("02" > 1);
 // console.log("2" > "2")
-// let name=new String("abcdef");
+;
 // console.log(name.slice(0,4));
 // console.log(name.toUpperCase())
 // console.log(name.toLowerCase())
@@ -21,7 +21,7 @@ let b=String(c);
 // console.log(name.charAt(4))
 // console.log(name.charCodeAt(4))
 
-const str2 = "Is this a question?";
+let str=new Number(100000);
 
-console.log(str2.endsWith("?"));
+console.log(str.toLocaleString())
 
