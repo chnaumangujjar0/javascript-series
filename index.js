@@ -25,3 +25,9 @@ let str=new Number(100000);
 
 console.log(str.toLocaleString())
 
+
+
+const min=10;
+const max=20;
+// ---------- for value between max or minimum-------//
+console.log(Math.floor(Math.random() * (max-min +1) ));
