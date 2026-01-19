@@ -1,0 +1,23 @@
+{
+  "name": "javascript-series",
+  "version": "1.0.0",
+  "description": "Muhammad Nauman",
+  "main": "index.js",
+  "scripts": {
+    "nodemon":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chnaumangujjar0/javascript-series.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chnaumangujjar0/javascript-series/issues"
+  },
+  "homepage": "https://github.com/chnaumangujjar0/javascript-series#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
