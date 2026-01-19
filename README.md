@@ -1,2 +1,0 @@
-# javascript-series
-Muhammad Nauman
