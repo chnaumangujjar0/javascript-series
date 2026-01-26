@@ -9,5 +9,76 @@
     <h1 style="font-size: 4rem;justify-content: center;align-items: center;color: rgb(21, 21, 216);">
         HELLO WORLD
     </h1>
+    <h2>Nauman</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <ul>
+        <li>red</li>
+        <li>blue</li>
+        <li>green</li>
+    </ul>
+
+   
 </body>
+ <script>
+    //    let parent = document.querySelector("ul");
+    //    for (let i = 0; i < parent.children.length; i++) {
+    //   parent.children[i].style.listStyle="none"
+        
+    //    }
+    //    parent.children[0].style.color="blue";
+    //    parent.children[0].style.padding="5px";
+    //    parent.children[0].style.listStyle="none";
+ 
+    //    console.log(parent.firstElementChild.innerHTML)
+    //     console.log(parent.children[0].nextElementSibling.innerHTML)
+    //    console.log(parent.lastElementChild.innerHTML)
+            
+//=================element creation=================
+
+//    const div = document.createElement("div")
+//    console.log(div)
+//     div.className="main-div";
+//     div.id=Math.round(Math.random() *10 +1)
+//     div.setAttribute("title","real div")
+//     div.style.backgroundColor="black"
+//     div.style.color="white";
+//     div.style.padding="10px"
+//     div.innerHTML="NAUMAN GUJJAR"
+//     document.body.appendChild(div)
+
+//============================================
+function newLi(colname){
+    const li=document.createElement("li")
+    li.innerHTML=`${colname}`
+    document.querySelector("ul").appendChild(li)
+
+}
+newLi("yellow");
+newLi("violet");
+//----opyimized method---------------------
+function newoptiLi(colname){
+    const li=document.createElement("li")
+   li.appendChild(document.createTextNode(colname))
+    document.querySelector("ul").appendChild(li)
+
+}
+newoptiLi("white");
+newoptiLi("black");
+
+//==============EDIT METHOD=================
+let nthColor = document.querySelector("li:nth-child(6)")
+console.log(nthColor.innerHTML)
+let newcol=document.createElement("li")
+newcol.textContent="grey";
+nthColor.replaceWith(newcol)
+
+//============remove mrthod============
+
+let lastCol=document.querySelector("li:last-child")
+lastCol.remove()
+    </script>
 </html>

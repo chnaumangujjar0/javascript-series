@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+<h1>Hello world</h1>
+<Button id="start">Start</Button>
+<Button id="stop">Stop</Button>
+
+</body>
+<script>
+   //============SetTIME OUT==================
+//    function h1Chang(){
+//     document.querySelector("h1").innerHTML="Javascript";
+//     console.log("changed");
+//    } 
+//     let setTime=setTimeout(h1Chang,2000);   
+//    document.querySelector("#stop").addEventListener("click",()=>{
+//    clearTimeout(setTime)
+//     console.log("stopped")
+//    })
+
+//======================Settime interval==============================
+
+// //=========MY WORK=================
+//     document.querySelector("#start").addEventListener("click",()=>{
+//     let start=function h1Chang(){
+//     console.log("hello")
+//     }    
+//     const setinter=setInterval(start,1000)
+
+
+//     document.querySelector("#stop").addEventListener("click",()=>{
+//     clearInterval(setinter)
+//     console.log("stopped")
+//  })
+       
+//    })
+
+//=================code after guidance============
+
+
+let intervalId=null;
+document.querySelector("#start").addEventListener("click",()=>{
+if(intervalId === null){
+    intervalId=setInterval(()=>{
+        console.log("hello");
+    },1000)
+}
+}
+)
+document.querySelector("#stop").addEventListener("click",()=>{
+    if(intervalId!= null){
+    clearInterval(intervalId)
+    console.log("Stopped")
+}
+})
+
+
+   
+ 
+
+
+
+
+     
+</script>
+</html>

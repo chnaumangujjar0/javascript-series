@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+   <div id="practice" style="background-color: yellow;">
+    <p style="color: black;background-color: aliceblue;">hello</p>
+    <p style="color: black;background-color: aliceblue;">hello</p>
+    <p style="color: black;background-color: aliceblue;">hello</p>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+//================================================================\\
+//==========important events==============================\\
+     // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+       
+        // e.stopPropagation()   //==for stop bubbling
+        console.log("google clicked");
+    }, false)
+   
+    //=====================for removing image on click================
+    // why we use targetname instead of parent node
+    /*beacuse when we  */ 
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        console.log(e.timeStamp)
+        console.log(e.bubbles)
+        console.log(e.isTrusted)
+        console.log(e.cancelable)
+        console.log(e.toElement)
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+ 
+        
+    })
+    //=====it continously fire on every enterance in childs element or gap sapace enterance
+//    document.getElementById("practice").addEventListener("mouseover",(e)=>{
+//     console.log("mouseover")
+//    })
+//====it is fire only on entrance
+//    document.getElementById("practice").addEventListener("mouseenter",(e)=>{
+//     console.log("mouseenter")
+//    })
+//============fire only when leave the element or move between childs for exampe if a element has three childa and have a sufficient gap betwwen them when pointer is on gap space  or leave the element its fire otherwise not 
+//    document.getElementById("practice").addEventListener("mouseout",(e)=>{
+//     console.log("mouseout")
+//     console.log(e.relatedTarget)=>for mouse activity track
+//    })
+
+//=============it fire only when pointer leave the element
+//    document.getElementById("practice").addEventListener("mouseleave",(e)=>{
+//     console.log("mouseleave")
+//    })
+//    document.addEventListener("click",(e)=>{
+//       console.log(e.clientX,e.clientY)
+//      console.log(e.screenX,e.screenY)
+//    })
+//    document.addEventListener("keydown",(e)=>{
+//     console.log(e.key)
+//     console.log(e.code)
+//    })
+
+    //removeIt.parentNode.removeChild(removeIt) ===> for removing withoul li tag
+</script>
+</html>
